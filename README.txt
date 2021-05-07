@@ -1,4 +1,4 @@
-LANCER LE DOCKER-COMPOSE
+LANCER LE CONTAINER
 docker-compose -f docker-compose-dev.yml up
 
 
