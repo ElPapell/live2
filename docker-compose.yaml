@@ -6,6 +6,6 @@ services:
         ports:
         - "80:80"
     back:
-        image: elpapell/exam_front:1.0.0
+        image: elpapell/exam_back:1.0.0
         ports:
         - "3000:3000"
