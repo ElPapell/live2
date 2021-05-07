@@ -1,0 +1,36 @@
+<html>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">  </script>
+    <script>
+      $(document).ready(function(){
+        var nomPizza;
+        $("#submit").click(function(){
+          nomPizza=$("#pizza").val();
+          $.post("http://localhost:3000/commande",{nom: nomPizza}, function(data){
+            if(data === 'yes') {
+                alert("commande réusite");
+              }
+          });
+        });
+      });
+    </script>
+   
+   <h1>Commande de Pizza</h1>
+   <form action="Commande.html" method="post">
+    <div>
+        <label for="name">Choix de la pizza :</label>
+        <input list="pizza" id="pizza"/>
+
+        <datalist id="pizza">   
+            <option value="4fromage">
+            <option value="Special">
+            <option value="margarita">
+                    
+        </datalist>
+
+    <input type="submit" value="Confirmer la commande ">
+    
+    </div>
+    
+</form>
+ 
+</html>
